@@ -3,4 +3,3 @@ import MinimalOffCanvasCartPlugin from './minimal-offcanvas-cart-plugin/minimal-
 
 const PluginManager = window.PluginManager;
 PluginManager.register('MinimalOffcanvasPlugin', MinimalOffCanvasCartPlugin, '[data-minimal-offcanvas]');
-PluginManager.register('ExamplePlugin', ExamplePlugin, '[data-example-plugin]');
