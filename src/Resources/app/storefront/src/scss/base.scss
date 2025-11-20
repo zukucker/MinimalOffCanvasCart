@@ -1,0 +1,33 @@
+.offcanvas-minimal-main-content{
+  padding: 1%;
+}
+.offcanvas-minimal-crosselling{
+  position: relative;
+  top: 12px;
+  right: 0;
+  height: auto;
+  background: #fff;
+  color: #000;
+  z-index: 99999;   
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding: 20px;
+  opacity: 1;
+  display: block;
+  transform: none;
+}
+.offcanvas-minimal{
+  position: relative;
+  top: 0px;
+  right: 0px;
+  height: auto;
+  background: #fff;
+  color: #000;
+  z-index: 99999;   
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  padding: 20px;
+  opacity: 1;
+  display: block;
+  transform: none;
+}
