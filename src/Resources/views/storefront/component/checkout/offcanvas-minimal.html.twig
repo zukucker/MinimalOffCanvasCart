@@ -79,18 +79,20 @@
         <div class="cross-selling-list">
             {% for product in crossSelling %}
             <div class="cross-selling-item flex items-center mb-3">
-                <div class="cart-item d-flex mb-3">
-                    <img src="{{ product.coverUrl }}" alt="{{ product.name }}" width="80" class="me-3">
-                    <div class="flex-grow">
-                        <div><strong>{{ product.name }}</strong></div>
-                        <div class="text-sm text-gray-500">
-                            {{ product.currencySymbol }} {{ product.priceGross }}
-                        </div>
-                        <div class="text-sm">
-                            {{ product.options|join(' | ') }}
+                <a href="/detail/{{product.id}}">
+                    <div class="cart-item d-flex mb-3">
+                        <img src="{{ product.coverUrl }}" alt="{{ product.name }}" width="80" class="me-3">
+                        <div class="flex-grow">
+                            <div><strong>{{ product.name }}</strong></div>
+                            <div class="text-sm text-gray-500">
+                                {{ product.currencySymbol }} {{ product.priceGross }}
+                            </div>
+                            <div class="text-sm">
+                                {{ product.options|join(' | ') }}
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <div class="offcanvas-actions">
                     <form class="minimal-offcanvas-add-to-cart" id="{{product.productId}}" method="post">
                         <input type="hidden" name="lineItems[{{ product.productId }}][id]" value="{{ product.productId }}">
