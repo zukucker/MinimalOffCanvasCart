@@ -6,7 +6,7 @@
     </span>                                                    
                                     
     <div class="alert-content-container">                         
-        1 product added to your shopping cart.                                    
+        {{ 'minimalCart.alert' | trans }}
     </div>
 </div>
 <div class="offcanvas-minimal"
@@ -26,7 +26,9 @@
         transform: none;
      ">
 
-    <h3 class="mb-3">Added to your cart</h3>
+    <h3 class="mb-3">
+        {{ 'minimalCart.added' | trans }}
+    </h3>
 
     {% if lineItem is defined %}
         <div class="cart-item d-flex mb-3">
@@ -49,10 +51,10 @@
 
     <div class="offcanvas-actions">
         <a href="{{ path('frontend.checkout.cart.page') }}" class="btn btn-primary w-100 mb-2">
-            View Cart
+        {{ 'minimalCart.viewCart' | trans }}
         </a>
         <button class="btn btn-light w-100 close-offcanvas">
-            Continue Shopping
+        {{ 'minimalCart.continue' | trans }}
         </button>
     </div>
     
@@ -75,7 +77,9 @@
         transform: none;
     ">
     <div class="offcanvas-cross-selling">
-        <h3 class="mb-3">Suggested Items</h3>
+        <h3 class="mb-3">
+        {{ 'minimalCart.suggested' | trans }}
+        </h3>
         <div class="cross-selling-list">
             {% for product in crossSelling %}
             <div class="cross-selling-item flex items-center mb-3">
@@ -98,7 +102,9 @@
                         <input type="hidden" name="lineItems[{{ product.productId }}][type]" value="product">
                         <input type="hidden" name="lineItems[{{ product.productId }}][stackable]" value="1">
                         <input type="hidden" name="lineItems[{{ product.productId }}][removable]" value="1">
-                        <button type="submit" class="btn btn-sm btn-buy">+ ADD TO CART</button>
+                        <button type="submit" class="btn btn-sm btn-buy">
+                            {{ 'minimalCart.addToCart' | trans }}
+                        </button>
                     </form>
                 </div>
             </div
