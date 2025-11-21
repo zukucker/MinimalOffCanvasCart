@@ -1,0 +1,10 @@
+{
+  "minimalCart": {
+    "alert": "1 Produkt erfolgreich hinzugefügt.",
+    "added": "Hinzugefügt",
+    "viewCart": "Zum Warenkorb",
+    "continue": "Weiter shoppen",
+    "suggested": "Empfohlen",
+    "addToCart":"+ hinzufügen"
+  }
+}
