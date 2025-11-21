@@ -51,7 +51,8 @@
             <div class="cross-selling-list">
                 {% for product in crossSelling %}
                     <div class="cross-selling-item flex items-center mb-3">
-                        <a href="/detail/{{product.id}}">
+                        {% set productUrl =  rawUrl('frontend.detail.page', { 'productId': product.productId }, salesChannel.domain|first.url)  %}
+                        <a href="{{productUrl}}">
                             <div class="cart-item d-flex mb-3">
                                 <img src="{{ product.coverUrl }}" alt="{{ product.name }}" width="80" class="me-3">
                                 <div class="flex-grow">
